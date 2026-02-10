@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "title": "SME Network Security Assessment Framework - Compliance Control Mappings",
+    "version": "1.0.0",
+    "last_updated": "2024-01-15",
+    "description": "Mapping between security controls across NIST CSF, ISO 27001, and CIS Controls v8"
+  },
+  "frameworks": {
+    "NIST_CSF": {
+      "name": "NIST Cybersecurity Framework",
+      "version": "1.1",
+      "url": "https://www.nist.gov/cyberframework"
+    },
+    "ISO_27001": {
+      "name": "ISO/IEC 27001:2022",
+      "version": "2022",
+      "url": "https://www.iso.org/standard/27001"
+    },
+    "CIS_Controls": {
+      "name": "CIS Controls",
+      "version": "8.0",
+      "url": "https://www.cisecurity.org/controls"
+    }
+  },
+  "control_mappings": [
+    {
+      "category": "Asset Management",
+      "controls": {
+        "NIST_CSF": ["ID.AM-1", "ID.AM-2"],
+        "ISO_27001": ["A.8.1.1", "A.8.1.2"],
+        "CIS_Controls": ["CIS.1", "CIS.2"]
+      },
+      "description": "Inventory of hardware and software assets",
+      "check_type": "automated",
+      "severity": "high"
+    },
+    {
+      "category": "Access Control",
+      "controls": {
+        "NIST_CSF": ["PR.AC-1", "PR.AC-3", "PR.AC-4"],
+        "ISO_27001": ["A.9.1.1", "A.9.2.1", "A.9.2.2", "A.9.2.3"],
+        "CIS_Controls": ["CIS.5", "CIS.6"]
+      },
+      "description": "Identity management and access control",
+      "check_type": "automated",
+      "severity": "critical"
+    },
+    {
+      "category": "Data Protection",
+      "controls": {
+        "NIST_CSF": ["PR.DS-1", "PR.DS-2", "PR.DS-5"],
+        "ISO_27001": ["A.8.2.1", "A.8.2.3", "A.10.1.1"],
+        "CIS_Controls": ["CIS.3"]
+      },
+      "description": "Data-at-rest and data-in-transit protection",
+      "check_type": "automated",
+      "severity": "critical"
+    },
+    {
+      "category": "Secure Configuration",
+      "controls": {
+        "NIST_CSF": ["PR.IP-1"],
+        "ISO_27001": ["A.8.9.1", "A.8.9.2"],
+        "CIS_Controls": ["CIS.4"]
+      },
+      "description": "Secure baseline configurations",
+      "check_type": "automated",
+      "severity": "high"
+    },
+    {
+      "category": "Vulnerability Management",
+      "controls": {
+        "NIST_CSF": ["ID.RA-1", "RS.MI-3"],
+        "ISO_27001": ["A.8.8.1", "A.8.8.2"],
+        "CIS_Controls": ["CIS.7"]
+      },
+      "description": "Vulnerability scanning and remediation",
+      "check_type": "automated",
+      "severity": "critical"
+    },
+    {
+      "category": "Logging and Monitoring",
+      "controls": {
+        "NIST_CSF": ["DE.CM-1", "DE.CM-7", "PR.PT-1"],
+        "ISO_27001": ["A.8.15.1", "A.8.15.2", "A.8.15.3"],
+        "CIS_Controls": ["CIS.8"]
+      },
+      "description": "Security event logging and monitoring",
+      "check_type": "automated",
+      "severity": "high"
+    },
+    {
+      "category": "Network Security",
+      "controls": {
+        "NIST_CSF": ["PR.AC-5", "PR.PT-4"],
+        "ISO_27001": ["A.8.20.1", "A.8.21.1", "A.8.22.1"],
+        "CIS_Controls": ["CIS.12", "CIS.13"]
+      },
+      "description": "Network segmentation and protection",
+      "check_type": "automated",
+      "severity": "high"
+    },
+    {
+      "category": "Malware Protection",
+      "controls": {
+        "NIST_CSF": ["DE.CM-4"],
+        "ISO_27001": ["A.8.7.1"],
+        "CIS_Controls": ["CIS.10"]
+      },
+      "description": "Anti-malware and endpoint protection",
+      "check_type": "automated",
+      "severity": "critical"
+    },
+    {
+      "category": "Incident Response",
+      "controls": {
+        "NIST_CSF": ["RS.RP-1", "RS.CO-1", "RS.AN-1"],
+        "ISO_27001": ["A.5.24", "A.5.25", "A.5.26"],
+        "CIS_Controls": ["CIS.17"]
+      },
+      "description": "Incident response planning and execution",
+      "check_type": "manual",
+      "severity": "high"
+    },
+    {
+      "category": "Business Continuity",
+      "controls": {
+        "NIST_CSF": ["RC.RP-1", "PR.IP-9"],
+        "ISO_27001": ["A.5.29", "A.5.30"],
+        "CIS_Controls": ["CIS.11"]
+      },
+      "description": "Backup and disaster recovery",
+      "check_type": "manual",
+      "severity": "high"
+    },
+    {
+      "category": "Security Training",
+      "controls": {
+        "NIST_CSF": ["PR.AT-1", "PR.AT-2"],
+        "ISO_27001": ["A.6.3"],
+        "CIS_Controls": ["CIS.14"]
+      },
+      "description": "Security awareness and training",
+      "check_type": "manual",
+      "severity": "medium"
+    },
+    {
+      "category": "Penetration Testing",
+      "controls": {
+        "NIST_CSF": ["DE.DP-3"],
+        "ISO_27001": ["A.8.8.2"],
+        "CIS_Controls": ["CIS.18"]
+      },
+      "description": "Security testing and validation",
+      "check_type": "automated",
+      "severity": "high"
+    }
+  ],
+  "automated_checks": {
+    "asset_inventory": {
+      "description": "Verify asset inventory exists and is current",
+      "commands": {
+        "linux": ["cat /etc/ansible/hosts", "nmap -sL"],
+        "windows": ["Get-ADComputer -Filter *", "Get-WmiObject Win32_ComputerSystem"]
+      },
+      "expected_result": "Asset list retrieved successfully"
+    },
+    "access_control": {
+      "description": "Verify access controls are properly configured",
+      "commands": {
+        "linux": ["cat /etc/ssh/sshd_config", "cat /etc/pam.d/common-auth"],
+        "windows": ["Get-LocalUser", "net accounts"]
+      },
+      "expected_result": "Strong authentication configured"
+    },
+    "encryption": {
+      "description": "Verify encryption is enabled",
+      "commands": {
+        "linux": ["lsblk -o NAME,FSTYPE", "cat /etc/crypttab"],
+        "windows": ["Get-BitLockerVolume", "manage-bde -status"]
+      },
+      "expected_result": "Encryption enabled on data volumes"
+    },
+    "firewall": {
+      "description": "Verify firewall is enabled and configured",
+      "commands": {
+        "linux": ["iptables -L -n", "ufw status"],
+        "windows": ["Get-NetFirewallProfile", "netsh advfirewall show allprofiles"]
+      },
+      "expected_result": "Firewall enabled with appropriate rules"
+    },
+    "logging": {
+      "description": "Verify logging is enabled",
+      "commands": {
+        "linux": ["systemctl status rsyslog", "cat /etc/rsyslog.conf"],
+        "windows": ["Get-Service eventlog", "auditpol /get /category:*"]
+      },
+      "expected_result": "Logging service active and configured"
+    },
+    "antivirus": {
+      "description": "Verify antivirus protection is active",
+      "commands": {
+        "linux": ["clamscan --version", "systemctl status clamav-daemon"],
+        "windows": ["Get-MpComputerStatus", "Get-Service WinDefend"]
+      },
+      "expected_result": "Antivirus active with current definitions"
+    },
+    "patching": {
+      "description": "Verify patching is current",
+      "commands": {
+        "linux": ["apt list --upgradable", "yum check-update"],
+        "windows": ["Get-WindowsUpdate", "wmic qfe list"]
+      },
+      "expected_result": "System is up to date or within policy window"
+    }
+  },
+  "severity_definitions": {
+    "critical": {
+      "score_range": "9.0-10.0",
+      "description": "Must be addressed immediately",
+      "sla_hours": 24
+    },
+    "high": {
+      "score_range": "7.0-8.9",
+      "description": "Address within one week",
+      "sla_hours": 168
+    },
+    "medium": {
+      "score_range": "4.0-6.9",
+      "description": "Address within 30 days",
+      "sla_hours": 720
+    },
+    "low": {
+      "score_range": "0.1-3.9",
+      "description": "Address within 90 days",
+      "sla_hours": 2160
+    }
+  },
+  "reporting": {
+    "templates": {
+      "executive": "executive_compliance_report.html",
+      "technical": "technical_compliance_report.html",
+      "remediation": "remediation_plan.html"
+    },
+    "output_formats": ["html", "json", "pdf", "csv"],
+    "metrics": [
+      "overall_compliance_percentage",
+      "controls_by_status",
+      "controls_by_severity",
+      "controls_by_category",
+      "trend_over_time"
+    ]
+  },
+  "remediation_guidance": {
+    "access_control": {
+      "recommendations": [
+        "Implement multi-factor authentication",
+        "Enforce strong password policies",
+        "Review and remove unnecessary accounts",
+        "Implement role-based access control",
+        "Enable account lockout policies"
+      ],
+      "references": [
+        "CIS Benchmark for Operating Systems",
+        "NIST SP 800-53 AC Controls"
+      ]
+    },
+    "data_protection": {
+      "recommendations": [
+        "Enable disk encryption (BitLocker/LUKS)",
+        "Implement TLS 1.2+ for data in transit",
+        "Classify sensitive data",
+        "Implement DLP solutions",
+        "Enable database encryption"
+      ],
+      "references": [
+        "NIST SP 800-111 Guide to Storage Encryption",
+        "OWASP Cryptographic Guidelines"
+      ]
+    },
+    "logging": {
+      "recommendations": [
+        "Enable comprehensive audit logging",
+        "Centralize logs in SIEM",
+        "Set appropriate log retention",
+        "Protect log integrity",
+        "Configure alerting for critical events"
+      ],
+      "references": [
+        "NIST SP 800-92 Guide to Log Management",
+        "CIS Controls IG2 Logging Requirements"
+      ]
+    },
+    "network_security": {
+      "recommendations": [
+        "Implement network segmentation",
+        "Enable host-based firewalls",
+        "Monitor network traffic",
+        "Restrict unnecessary services",
+        "Implement intrusion detection"
+      ],
+      "references": [
+        "NIST SP 800-41 Firewall Guidelines",
+        "CIS Network Benchmarks"
+      ]
+    }
+  }
+}

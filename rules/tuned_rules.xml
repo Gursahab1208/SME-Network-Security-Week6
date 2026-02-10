@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SME Network Security Assessment Framework
+Week 6: Tuned Wazuh Detection Rules
+
+These rules are designed to:
+- Reduce false positives while maintaining security visibility
+- Enhance detection for specific attack patterns
+- Add custom correlation rules for SME environments
+- Improve alert quality and reduce analyst fatigue
+
+Author: SME Security Team
+Version: 1.0.0
+Last Updated: 2024-01-15
+
+DEPLOYMENT INSTRUCTIONS:
+1. Copy this file to /var/ossec/etc/rules/
+2. Test with: /var/ossec/bin/wazuh-logtest
+3. Restart Wazuh: systemctl restart wazuh-manager
+4. Monitor alerts for expected improvements
+-->
+
+<!-- ============================================================================
+     SECTION 1: FALSE POSITIVE REDUCTION RULES
+     These rules suppress or reduce the level of known noisy alerts
+============================================================================ -->
+
+<group name="local,syslog,sshd,">
+
+  <!-- Suppress session opened/closed noise from monitoring systems -->
+  <rule id="900001" level="0">
+    <if_sid>5501</if_sid>
+    <srcip>10.0.0.50</srcip>
+    <description>Suppressed: Session opened by monitoring system</description>
+  </rule>
+
+  <rule id="900002" level="0">
+    <if_sid>5502</if_sid>
+    <srcip>10.0.0.50</srcip>
+    <description>Suppressed: Session closed by monitoring system</description>
+  </rule>
+
+  <!-- Reduce level for expected backup system authentication -->
+  <rule id="900003" level="3">
+    <if_sid>5501</if_sid>
+    <user>backup</user>
+    <time>01:00 - 05:00</time>
+    <description>Expected: Backup system login during maintenance window</description>
+  </rule>
+
+  <!-- Suppress known scanner false positives -->
+  <rule id="900010" level="0">
+    <if_sid>31102</if_sid>
+    <url>favicon.ico|robots.txt|sitemap.xml</url>
+    <description>Suppressed: Common web requests (not attacks)</description>
+  </rule>
+
+  <!-- Reduce level for health check 404s -->
+  <rule id="900011" level="2">
+    <if_sid>31102</if_sid>
+    <url>/health|/healthz|/ready|/status</url>
+    <description>Informational: Health check endpoint 404</description>
+  </rule>
+
+  <!-- Suppress Nagios/monitoring web checks -->
+  <rule id="900012" level="0">
+    <if_sid>31100,31101,31102</if_sid>
+    <srcip>10.0.0.51</srcip>
+    <description>Suppressed: Monitoring system web checks</description>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 2: ENHANCED DETECTION RULES
+     Custom rules for better detection of specific threats
+============================================================================ -->
+
+<group name="local,attack,">
+
+  <!-- Enhanced SSH brute force detection with IP reputation -->
+  <rule id="900100" level="12">
+    <if_sid>5715</if_sid>
+    <same_source_ip />
+    <frequency>10</frequency>
+    <timeframe>120</timeframe>
+    <description>SSH brute force attack detected - High frequency</description>
+    <group>authentication_failed,attack,</group>
+  </rule>
+
+  <!-- SSH brute force from multiple sources (distributed attack) -->
+  <rule id="900101" level="14">
+    <if_sid>5711</if_sid>
+    <different_srcip />
+    <same_user />
+    <frequency>5</frequency>
+    <timeframe>300</timeframe>
+    <description>Distributed SSH brute force attack against single user</description>
+    <group>authentication_failed,attack,</group>
+  </rule>
+
+  <!-- Credential stuffing detection -->
+  <rule id="900102" level="13">
+    <if_sid>5503,5711</if_sid>
+    <same_source_ip />
+    <different_user />
+    <frequency>15</frequency>
+    <timeframe>300</timeframe>
+    <description>Possible credential stuffing attack - Multiple users from single IP</description>
+    <group>authentication_failed,attack,</group>
+  </rule>
+
+  <!-- SQL Injection with higher confidence -->
+  <rule id="900110" level="14">
+    <if_sid>31120</if_sid>
+    <match>UNION.*SELECT|SELECT.*FROM.*WHERE|INSERT.*INTO|UPDATE.*SET|DELETE.*FROM</match>
+    <description>High confidence SQL injection attempt detected</description>
+    <group>web,attack,sql_injection,</group>
+  </rule>
+
+  <!-- Blind SQL Injection detection -->
+  <rule id="900111" level="12">
+    <if_sid>31120</if_sid>
+    <match>SLEEP\(|BENCHMARK\(|WAITFOR|pg_sleep</match>
+    <description>Time-based blind SQL injection attempt</description>
+    <group>web,attack,sql_injection,</group>
+  </rule>
+
+  <!-- XSS with DOM-based patterns -->
+  <rule id="900115" level="12">
+    <if_sid>31130</if_sid>
+    <match>document\.cookie|document\.location|window\.location|eval\(</match>
+    <description>DOM-based XSS attack attempt</description>
+    <group>web,attack,xss,</group>
+  </rule>
+
+  <!-- Directory traversal attack -->
+  <rule id="900120" level="10">
+    <if_matched_group>web</if_matched_group>
+    <match>\.\.\/|\.\.\\|%2e%2e%2f|%2e%2e\/|\.%2e\/</match>
+    <description>Directory traversal attack attempt</description>
+    <group>web,attack,</group>
+  </rule>
+
+  <!-- Command injection attempt -->
+  <rule id="900121" level="12">
+    <if_matched_group>web</if_matched_group>
+    <match>;\s*(ls|cat|id|whoami|wget|curl|nc|bash|sh)\s|`.*`|\$\(.*\)</match>
+    <description>Command injection attack attempt</description>
+    <group>web,attack,command_injection,</group>
+  </rule>
+
+  <!-- Log4j exploitation attempt -->
+  <rule id="900130" level="15">
+    <if_matched_group>web</if_matched_group>
+    <match>\$\{jndi:|%24%7Bjndi:|%2524%257Bjndi:</match>
+    <description>CRITICAL: Log4Shell (CVE-2021-44228) exploitation attempt</description>
+    <group>web,attack,exploit,</group>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 3: CORRELATION RULES
+     Multi-stage attack detection and event correlation
+============================================================================ -->
+
+<group name="local,correlation,">
+
+  <!-- Reconnaissance followed by exploitation attempt -->
+  <rule id="900200" level="13">
+    <if_sid>5715</if_sid>
+    <if_matched_sid>900100</if_matched_sid>
+    <same_source_ip />
+    <description>Attack progression: Recon followed by brute force from same IP</description>
+    <group>attack,correlation,</group>
+  </rule>
+
+  <!-- Successful login after multiple failures (potential compromise) -->
+  <rule id="900201" level="14">
+    <if_sid>5712</if_sid>
+    <if_matched_sid>5711</if_matched_sid>
+    <same_source_ip />
+    <same_user />
+    <description>ALERT: Successful login after multiple failures - Possible account compromise</description>
+    <group>authentication_success,correlation,compromise,</group>
+  </rule>
+
+  <!-- Web attack followed by successful authentication -->
+  <rule id="900202" level="15">
+    <if_sid>5712,60101</if_sid>
+    <if_matched_group>web,attack</if_matched_group>
+    <same_source_ip />
+    <description>CRITICAL: System access after web attack - Possible compromise</description>
+    <group>attack,correlation,compromise,</group>
+  </rule>
+
+  <!-- Multiple hosts attacked from same source -->
+  <rule id="900210" level="14">
+    <if_matched_group>attack</if_matched_group>
+    <same_source_ip />
+    <different_dstip />
+    <frequency>5</frequency>
+    <timeframe>600</timeframe>
+    <description>Lateral movement: Same source attacking multiple hosts</description>
+    <group>attack,correlation,lateral_movement,</group>
+  </rule>
+
+  <!-- Data exfiltration indicators -->
+  <rule id="900220" level="13">
+    <if_matched_group>integrity_monitoring</if_matched_group>
+    <match>\.zip$|\.tar$|\.7z$|\.rar$</match>
+    <frequency>5</frequency>
+    <timeframe>300</timeframe>
+    <description>Possible data exfiltration: Multiple archive files created</description>
+    <group>data_exfiltration,correlation,</group>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 4: WINDOWS-SPECIFIC RULES
+     Enhanced Windows event monitoring
+============================================================================ -->
+
+<group name="local,windows,">
+
+  <!-- Suspicious PowerShell execution -->
+  <rule id="900300" level="12">
+    <if_sid>60001</if_sid>
+    <match>powershell.*-enc|-encodedcommand|bypass|hidden|noprofile</match>
+    <description>Suspicious PowerShell execution with obfuscation flags</description>
+    <group>windows,attack,powershell,</group>
+  </rule>
+
+  <!-- LSASS memory access (credential dumping) -->
+  <rule id="900301" level="15">
+    <if_sid>60001</if_sid>
+    <match>lsass\.exe</match>
+    <description>CRITICAL: LSASS process access - Possible credential dumping</description>
+    <group>windows,attack,credential_access,</group>
+  </rule>
+
+  <!-- Service installation (persistence) -->
+  <rule id="900302" level="10">
+    <if_sid>60001</if_sid>
+    <match>sc\.exe.*create|New-Service</match>
+    <description>New Windows service created - Check for persistence</description>
+    <group>windows,persistence,</group>
+  </rule>
+
+  <!-- Scheduled task creation (persistence) -->
+  <rule id="900303" level="10">
+    <if_sid>60001</if_sid>
+    <match>schtasks.*\/create|Register-ScheduledTask</match>
+    <description>Scheduled task created - Check for persistence</description>
+    <group>windows,persistence,</group>
+  </rule>
+
+  <!-- Windows Defender tampering -->
+  <rule id="900310" level="14">
+    <if_sid>60001</if_sid>
+    <match>Set-MpPreference.*-DisableRealtimeMonitoring|sc.*stop.*WinDefend</match>
+    <description>ALERT: Attempt to disable Windows Defender</description>
+    <group>windows,defense_evasion,</group>
+  </rule>
+
+  <!-- Shadow copy deletion (ransomware indicator) -->
+  <rule id="900311" level="15">
+    <if_sid>60001</if_sid>
+    <match>vssadmin.*delete.*shadows|wmic.*shadowcopy.*delete</match>
+    <description>CRITICAL: Shadow copy deletion - Possible ransomware activity</description>
+    <group>windows,ransomware,</group>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 5: FILE INTEGRITY MONITORING ENHANCEMENTS
+============================================================================ -->
+
+<group name="local,syscheck,">
+
+  <!-- Critical system file modification -->
+  <rule id="900400" level="14">
+    <if_sid>550,553</if_sid>
+    <match>/etc/passwd|/etc/shadow|/etc/sudoers</match>
+    <description>CRITICAL: Critical system authentication file modified</description>
+    <group>syscheck,critical,</group>
+  </rule>
+
+  <!-- SSH configuration change -->
+  <rule id="900401" level="12">
+    <if_sid>550,553</if_sid>
+    <match>/etc/ssh/sshd_config|\.ssh/authorized_keys</match>
+    <description>SSH configuration or authorized keys modified</description>
+    <group>syscheck,ssh,</group>
+  </rule>
+
+  <!-- Web server configuration change -->
+  <rule id="900402" level="10">
+    <if_sid>550,553</if_sid>
+    <match>nginx\.conf|httpd\.conf|apache2\.conf|\.htaccess</match>
+    <description>Web server configuration file modified</description>
+    <group>syscheck,web,</group>
+  </rule>
+
+  <!-- Webshell detection -->
+  <rule id="900410" level="15">
+    <if_sid>554</if_sid>
+    <match>\.php$|\.jsp$|\.asp$|\.aspx$</match>
+    <regex>\/var\/www|\/srv\/www|inetpub</regex>
+    <description>CRITICAL: New script file in web directory - Possible webshell</description>
+    <group>syscheck,webshell,attack,</group>
+  </rule>
+
+  <!-- Suppress expected file changes -->
+  <rule id="900490" level="0">
+    <if_sid>550,551,552,553,554</if_sid>
+    <match>\.log$|\.pid$|\.cache|\.tmp$</match>
+    <description>Suppressed: Expected temporary file changes</description>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 6: NETWORK ANOMALY DETECTION
+============================================================================ -->
+
+<group name="local,network,">
+
+  <!-- Connection to known malicious port -->
+  <rule id="900500" level="12">
+    <if_matched_group>firewall</if_matched_group>
+    <match>DPT=4444|DPT=5555|DPT=6666|DPT=31337</match>
+    <description>Connection attempt to known malicious port</description>
+    <group>network,suspicious,</group>
+  </rule>
+
+  <!-- Large number of connections from single IP -->
+  <rule id="900501" level="10">
+    <if_matched_group>firewall</if_matched_group>
+    <same_source_ip />
+    <frequency>100</frequency>
+    <timeframe>60</timeframe>
+    <description>High connection rate from single IP - Possible DoS/scan</description>
+    <group>network,dos,</group>
+  </rule>
+
+  <!-- DNS tunneling indicators -->
+  <rule id="900510" level="11">
+    <if_matched_group>network</if_matched_group>
+    <match>TXT.*[A-Za-z0-9+/=]{50,}</match>
+    <description>Possible DNS tunneling - Large TXT record query</description>
+    <group>network,exfiltration,</group>
+  </rule>
+
+</group>
+
+
+<!-- ============================================================================
+     SECTION 7: COMPLIANCE AND AUDIT RULES
+============================================================================ -->
+
+<group name="local,compliance,">
+
+  <!-- Privileged account usage -->
+  <rule id="900600" level="8">
+    <if_sid>5501,5712,60101</if_sid>
+    <user>root|Administrator|admin</user>
+    <description>Privileged account login - Audit trail</description>
+    <group>authentication_success,compliance,privileged,</group>
+  </rule>
+
+  <!-- After-hours privileged access -->
+  <rule id="900601" level="10">
+    <if_sid>900600</if_sid>
+    <time>22:00 - 06:00</time>
+    <weekday>saturday|sunday</weekday>
+    <description>After-hours privileged account access</description>
+    <group>compliance,suspicious,</group>
+  </rule>
+
+  <!-- Security log cleared -->
+  <rule id="900610" level="14">
+    <if_sid>60104</if_sid>
+    <description>ALERT: Security audit log cleared - Possible cover-up</description>
+    <group>compliance,audit,suspicious,</group>
+  </rule>
+
+  <!-- Group policy modification -->
+  <rule id="900611" level="10">
+    <if_sid>60001</if_sid>
+    <match>gpupdate|group policy</match>
+    <description>Group Policy modification detected</description>
+    <group>compliance,policy,</group>
+  </rule>
+
+</group>
+

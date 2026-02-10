@@ -1,0 +1,37 @@
+# SME Network Security Assessment Framework
+# Week 6: Testing, Hardening & Refinement
+# Python Dependencies
+#
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+psutil>=5.9.0          # System monitoring and process utilities
+
+# Optional but recommended
+python-nmap>=0.7.1     # Nmap Python bindings (requires nmap installed)
+
+# Network and security testing
+requests>=2.28.0       # HTTP library for web testing
+urllib3>=1.26.0        # HTTP client
+
+# XML processing (built-in but listed for clarity)
+# xml.etree.ElementTree is part of Python standard library
+
+# JSON processing (built-in)
+# json is part of Python standard library
+
+# Data handling
+dataclasses>=0.6       # Data classes (Python 3.6 backport, built-in 3.7+)
+
+# Reporting
+jinja2>=3.1.0          # Template engine for HTML reports
+
+# Development/testing (optional)
+pytest>=7.0.0          # Testing framework
+pytest-cov>=4.0.0      # Test coverage
+black>=23.0.0          # Code formatter
+flake8>=6.0.0          # Linting
+
+# Documentation (optional)
+sphinx>=6.0.0          # Documentation generator
+sphinx-rtd-theme>=1.2.0  # Read the Docs theme
