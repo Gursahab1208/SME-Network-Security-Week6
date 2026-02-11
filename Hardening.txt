@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sV -O --script default,safe,vuln 192.168.4.62" profile_name="" scanner="nmap" start="1770781848" startstr="Wed Feb 11 14:50:48 2026" version="7.98" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="1000" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.98 ( https://nmap.org ) at 2026-02-11 14:50 +1100
+No profinet devices in the subnet
+Pre-scan script results:
+|_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+| targets-sniffer: Sniffed 29 address(es). 
+| 192.168.4.62
+| 224.0.0.1
+| 239.255.255.250
+| 224.0.0.9
+| 239.255.255.253
+| 192.168.4.1
+| 224.0.0.251
+| fd60:f7f2:8708:1::1
+| fe80::eb2d:91e:c53:a5a7
+| fe80::e93:a5ff:fe1d:4a6d
+| 192.168.4.22
+| fd60:f7f2:8708:1:4af:1a86:756f:c41a
+| fe80::81e:fc56:a385:1968
+| fe80::808d:5fff:fe20:81f0
+| fd60:f7f2:8708:1:6d5d:36b6:8463:42a
+| fd60:f7f2:8708:1:1c7b:6a5:76b3:a475
+| 34.223.153.246
+| 0.0.0.0
+| c0a8:43e::
+| 35.80.125.17
+| 224.0.0.13
+| fd60:f7f2:8708:1:b475:6033:937b:6f5
+| 157.240.8.53
+| 224.0.23.12
+| 202.142.142.242
+| 48.218.107.32
+| 20.191.166.67
+| 172.64.148.235
+|_104.18.32.47
+|_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+| broadcast-dhcp-discover: 
+|   Response 1 of 1: 
+|     Interface: eth2
+|     IP Offered: 192.168.4.119
+|     Server Identifier: 192.168.4.1
+|     Subnet Mask: 255.255.252.0
+|     Router: 192.168.4.1
+|     Domain Name Server: 202.142.142.142, 202.142.142.242
+|     Broadcast Address: 192.168.7.255
+|_    NTP Servers: 192.168.4.1
+| broadcast-ping: 
+|   IP: 192.168.4.22  MAC: 42:66:c3:78:9a:56
+|_  Use --script-args=newtargets to add the results as targets
+| targets-ipv6-multicast-echo: 
+|   IP: fd60:f7f2:8708:1::1                  MAC: 0c:93:a5:1d:4a:6d  IFACE: eth2
+|   IP: fe80::e93:a5ff:fe1d:4a6d             MAC: 0c:93:a5:1d:4a:6d  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:4af:1a86:756f:c41a  MAC: 42:66:c3:78:9a:56  IFACE: eth2
+|   IP: fe80::81e:fc56:a385:1968             MAC: 42:66:c3:78:9a:56  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:6d5d:36b6:8463:42a  MAC: 82:8d:5f:20:81:f0  IFACE: eth2
+|   IP: fe80::808d:5fff:fe20:81f0            MAC: 82:8d:5f:20:81:f0  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:b475:6033:937b:6f5  MAC: 02:2a:ae:a7:de:4e  IFACE: eth2
+|_  Use --script-args=newtargets to add the results as targets
+Bug in lltd-discovery: no string output.
+| broadcast-igmp-discovery: 
+|   192.168.4.22
+|     Interface: eth2
+|     Version: 2
+|     Group: 224.0.0.251
+|     Description: mDNS (rfc6762)
+|_  Use the newtargets script-arg to add the results as targets
+| targets-ipv6-multicast-invalid-dst: 
+|   IP: fd60:f7f2:8708:1::1                  MAC: 0c:93:a5:1d:4a:6d  IFACE: eth2
+|   IP: fe80::e93:a5ff:fe1d:4a6d             MAC: 0c:93:a5:1d:4a:6d  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:4af:1a86:756f:c41a  MAC: 42:66:c3:78:9a:56  IFACE: eth2
+|   IP: fe80::81e:fc56:a385:1968             MAC: 42:66:c3:78:9a:56  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:6d5d:36b6:8463:42a  MAC: 82:8d:5f:20:81:f0  IFACE: eth2
+|   IP: fe80::808d:5fff:fe20:81f0            MAC: 82:8d:5f:20:81:f0  IFACE: eth2
+|   IP: fd60:f7f2:8708:1:b475:6033:937b:6f5  MAC: 02:2a:ae:a7:de:4e  IFACE: eth2
+|_  Use --script-args=newtargets to add the results as targets
+| eap-info: 
+| Available authentication methods with identity="anonymous" on interface eth2
+|   unknown  EAP-TTLS
+|   unknown  EAP-TLS
+|   unknown  EAP-MSCHAP-V2
+|_  unknown  PEAP
+| targets-ipv6-multicast-mld: 
+|   IP: fe80::e93:a5ff:fe1d:4a6d  MAC: 0c:93:a5:1d:4a:6d  IFACE: eth2
+| 
+|_  Use --script-args=newtargets to add the results as targets
+| broadcast-listener: 
+|   ether
+|       EIGRP Update
+|         
+|       ARP Request
+|         sender ip    sender mac         target ip
+|         192.168.4.1  0c:93:a5:1d:4a:6d  192.168.4.119
+|   udp
+|       DHCP
+|         srv ip       cli ip         mask           gw           dns                               vendor
+|         192.168.4.1  192.168.4.118  255.255.252.0  192.168.4.1  202.142.142.142, 202.142.142.242  -
+|_        192.168.4.1  192.168.4.119  255.255.252.0  192.168.4.1  202.142.142.142, 202.142.142.242  -
+Windows does not have adequate raw socket support.
+Windows does not have adequate raw socket support.
+Windows does not have adequate raw socket support.
+Nmap scan report for 192.168.4.62
+Host is up (0.00022s latency).
+Not shown: 996 closed tcp ports (reset)
+Bug in http-security-headers: no string output.
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds?
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+16992/tcp open  http          Intel Active Management Technology User Notification Service httpd 12.0.94.2380
+|_unusual-port: http unexpected on port tcp/16992
+|_http-server-header: Intel(R) Active Management Technology 12.0.94.2380
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-xssed: No previously reported XSS vuln.
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /blog/: Blog
+|   /weblog/: Blog
+|   /weblogs/: Blog
+|   /wordpress/: Blog
+|   /wiki/: Wiki
+|   /mediawiki/: Wiki
+|   /wiki/Main_Page: Wiki
+|   /tikiwiki/: Tikiwiki
+|   /cgi-bin/mj_wwwusr: Majordomo2 Mailing List
+|   /majordomo/mj_wwwusr: Majordomo2 Mailing List
+|   /j2ee/examples/servlets/: Oracle j2ee examples
+|   /j2ee/examples/jsp/: Oracle j2ee examples
+|   /dsc/: Trend Micro Data Loss Prevention Virtual Appliance
+|   /reg_1.htm: Polycom IP phone
+|   /adr.htm: Snom IP Phone
+|   /line_login.htm?l=1: Snom IP Phone
+|   /tbook.csv: Snom IP Phone
+|   /globalSIPsettings.html: Aastra IP Phone
+|   /SIPsettingsLine1.html: Aastra IP Phone
+|   /websvn/: WEBSVN Repository
+|   /login.stm: Belkin G Wireless Router
+|   /tools_admin.php: D-Link DIR-300
+|   /bsc_lan.php: D-Link DIR-300, DIR-320, DIR-615 revD
+|   /Manage.tri: Linksys WRT54G2
+|   //system.html: CMNC-200 IP Camera
+|   /main_configure.cgi: Intellinet IP Camera
+|   /OvCgi/Toolbar.exe: HP OpenView Network Node Manager
+|   /frontend/x3/: CPanel
+|   /awstatstotals/awstatstotals.php: AWStats Totals
+|   /awstats/awstatstotals.php: AWStats Totals
+|   /awstatstotals.php: AWStats Totals
+|   /awstats/index.php: AWStats Totals
+|   /awstatstotals/index.php: AWStats Totals
+|   /egroupware/: eGroupware
+|   /calendar/cal_search.php: ExtCalendar
+|   /cal_search.php: ExtCalendar
+|   /a_viewusers.php: Andys PHP Knowledgebase
+|   /aphpkb/: Andys PHP Knowledgebase
+|   /webedition/we/include/we_modules/: Web Edition
+|   /webedition/: Web Edition
+|   /Examples/: Possible documentation files
+|   /LightNEasy.php?do=login: LightNEasy
+|   /channel_detail.php: DzTube
+|   /cgi-bin/vcs: Mitel Audio and Web Conferencing (AWC)
+|   /ocsreports/: OCS Inventory
+|   /vbseo.php: vBSEO
+|   /forum/: Forum
+|   /forums/: Forum
+|   /smf/: Forum
+|   /phpbb/: Forum
+|   /manager/: Possible admin folder
+|   /admin.php: Possible admin folder
+|   /admin/: Possible admin folder
+|   /admin/admin/: Possible admin folder
+|   /administrator/: Possible admin folder
+|   /moderator/: Possible admin folder
+|   /webadmin/: Possible admin folder
+|   /adminarea/: Possible admin folder
+|   /bb-admin/: Possible admin folder
+|   /adminLogin/: Possible admin folder
+|   /admin_area/: Possible admin folder
+|   /panel-administracion/: Possible admin folder
+|   /instadmin/: Possible admin folder
+|   /memberadmin/: Possible admin folder
+|   /administratorlogin/: Possible admin folder
+|   /adm/: Possible admin folder
+|   /admin/account.php: Possible admin folder
+|   /admin/index.php: Possible admin folder
+|   /admin/login.php: Possible admin folder
+|   /admin/admin.php: Possible admin folder
+|   /joomla/administrator: Possible admin folder
+|   /login.php: Possible admin folder
+|   /admin_area/admin.php: Possible admin folder
+|   /admin_area/login.php: Possible admin folder
+|   /siteadmin/login.php: Possible admin folder
+|   /siteadmin/index.php: Possible admin folder
+|   /siteadmin/login.html: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /admin/login.html: Possible admin folder
+|   /admin/admin.html: Possible admin folder
+|   /admin_area/index.php: Possible admin folder
+|   /bb-admin/index.php: Possible admin folder
+|   /bb-admin/login.php: Possible admin folder
+|   /bb-admin/admin.php: Possible admin folder
+|   /admin/home.php: Possible admin folder
+|   /admin_area/login.html: Possible admin folder
+|   /admin_area/index.html: Possible admin folder
+|   /admin/controlpanel.php: Possible admin folder
+|   /admincp/: Possible admin folder
+|   /admincp/index.asp: Possible admin folder
+|   /admincp/index.html: Possible admin folder
+|   /admincp/login.php: Possible admin folder
+|   /admin/account.html: Possible admin folder
+|   /adminpanel.html: Possible admin folder
+|   /webadmin.html: Possible admin folder
+|   /webadmin/index.html: Possible admin folder
+|   /webadmin/admin.html: Possible admin folder
+|   /webadmin/login.html: Possible admin folder
+|   /admin/admin_login.html: Possible admin folder
+|   /admin_login.html: Possible admin folder
+|   /panel-administracion/login.html: Possible admin folder
+|   /admin/cp.php: Possible admin folder
+|   /cp.php: Possible admin folder
+|   /administrator/index.php: Possible admin folder
+|   /administrator/login.php: Possible admin folder
+|   /nsw/admin/login.php: Possible admin folder
+|   /webadmin/login.php: Possible admin folder
+|   /admin/admin_login.php: Possible admin folder
+|   /admin_login.php: Possible admin folder
+|   /administrator/account.php: Possible admin folder
+|   /administrator.php: Possible admin folder
+|   /admin_area/admin.html: Possible admin folder
+|   /pages/admin/admin-login.php: Possible admin folder
+|   /admin/admin-login.php: Possible admin folder
+|   /admin-login.php: Possible admin folder
+|   /bb-admin/index.html: Possible admin folder
+|   /bb-admin/login.html: Possible admin folder
+|   /bb-admin/admin.html: Possible admin folder
+|   /admin/home.html: Possible admin folder
+|   /modelsearch/login.php: Possible admin folder
+|   /moderator.php: Possible admin folder
+|   /moderator/login.php: Possible admin folder
+|   /moderator/admin.php: Possible admin folder
+|   /account.php: Possible admin folder
+|   /pages/admin/admin-login.html: Possible admin folder
+|   /admin/admin-login.html: Possible admin folder
+|   /admin-login.html: Possible admin folder
+|   /controlpanel.php: Possible admin folder
+|   /admincontrol.php: Possible admin folder
+|   /admin/adminLogin.html: Possible admin folder
+|   /adminLogin.html: Possible admin folder
+|   /home.html: Possible admin folder
+|   /rcjakar/admin/login.php: Possible admin folder
+|   /adminarea/index.html: Possible admin folder
+|   /adminarea/admin.html: Possible admin folder
+|   /webadmin.php: Possible admin folder
+|   /webadmin/index.php: Possible admin folder
+|   /webadmin/admin.php: Possible admin folder
+|   /admin/controlpanel.html: Possible admin folder
+|   /admin.html: Possible admin folder
+|   /admin/cp.html: Possible admin folder
+|   /cp.html: Possible admin folder
+|   /adminpanel.php: Possible admin folder
+|   /moderator.html: Possible admin folder
+|   /administrator/index.html: Possible admin folder
+|   /administrator/login.html: Possible admin folder
+|   /user.html: Possible admin folder
+|   /administrator/account.html: Possible admin folder
+|   /administrator.html: Possible admin folder
+|   /login.html: Possible admin folder
+|   /modelsearch/login.html: Possible admin folder
+|   /moderator/login.html: Possible admin folder
+|   /adminarea/login.html: Possible admin folder
+|   /panel-administracion/index.html: Possible admin folder
+|   /panel-administracion/admin.html: Possible admin folder
+|   /modelsearch/index.html: Possible admin folder
+|   /modelsearch/admin.html: Possible admin folder
+|   /admincontrol/login.html: Possible admin folder
+|   /adm/index.html: Possible admin folder
+|   /adm.html: Possible admin folder
+|   /moderator/admin.html: Possible admin folder
+|   /user.php: Possible admin folder
+|   /account.html: Possible admin folder
+|   /controlpanel.html: Possible admin folder
+|   /admincontrol.html: Possible admin folder
+|   /panel-administracion/login.php: Possible admin folder
+|   /wp-login.php: Possible admin folder
+|   /wp-json: Possible admin folder
+|   /adminLogin.php: Possible admin folder
+|   /admin/adminLogin.php: Possible admin folder
+|   /adminarea/index.php: Possible admin folder
+|   /adminarea/admin.php: Possible admin folder
+|   /adminarea/login.php: Possible admin folder
+|   /panel-administracion/index.php: Possible admin folder
+|   /panel-administracion/admin.php: Possible admin folder
+|   /modelsearch/index.php: Possible admin folder
+|   /modelsearch/admin.php: Possible admin folder
+|   /admincontrol/login.php: Possible admin folder
+|   /adm/admloginuser.php: Possible admin folder
+|   /admloginuser.php: Possible admin folder
+|   /admin2.php: Possible admin folder
+|   /admin2/login.php: Possible admin folder
+|   /admin2/index.php: Possible admin folder
+|   /adm/index.php: Possible admin folder
+|   /adm.php: Possible admin folder
+|   /affiliate.php: Possible admin folder
+|   /adm_auth.php: Possible admin folder
+|   /memberadmin.php: Possible admin folder
+|   /administratorlogin.php: Possible admin folder
+|   /account.cfm: Possible admin folder
+|   /admin/account.cfm: Possible admin folder
+|   /admin/index.cfm: Possible admin folder
+|   /admin/login.cfm: Possible admin folder
+|   /admin/admin.cfm: Possible admin folder
+|   /admin.cfm: Possible admin folder
+|   /admin/admin_login.cfm: Possible admin folder
+|   /admin_login.cfm: Possible admin folder
+|   /adminpanel.cfm: Possible admin folder
+|   /admin/controlpanel.cfm: Possible admin folder
+|   /admincontrol.cfm: Possible admin folder
+|   /panel-administracion/login.cfm: Possible admin folder
+|   /admin/cp.cfm: Possible admin folder
+|   /pages/admin/admin-login.cfm: Possible admin folder
+|   /admincp/index.cfm: Possible admin folder
+|   /admincp/login.cfm: Possible admin folder
+|   /admin_area/admin.cfm: Possible admin folder
+|   /admin_area/login.cfm: Possible admin folder
+|   /moderator/login.cfm: Possible admin folder
+|   /administrator/login.cfm: Possible admin folder
+|   /moderator.cfm: Possible admin folder
+|   /modelsearch/index.cfm: Possible admin folder
+|   /panel-administracion/admin.cfm: Possible admin folder
+|   /adm/admloginuser.cfm: Possible admin folder
+|   /adm.cfm: Possible admin folder
+|   /adm_auth.cfm: Possible admin folder
+|   /administratorlogin.cfm: Possible admin folder
+|   /webadmin.cfm: Possible admin folder
+|   /webadmin/index.cfm: Possible admin folder
+|   /modelsearch/login.cfm: Possible admin folder
+|   /login.cfm: Possible admin folder
+|   /administrator.cfm: Possible admin folder
+|   /administrator/account.cfm: Possible admin folder
+|   /adminLogin.cfm: Possible admin folder
+|   /siteadmin/login.cfm: Possible admin folder
+|   /admin2/index.cfm: Possible admin folder
+|   /adm/index.cfm: Possible admin folder
+|   /admin_area/index.cfm: Possible admin folder
+|   /bb-admin/index.cfm: Possible admin folder
+|   /bb-admin/login.cfm: Possible admin folder
+|   /bb-admin/admin.cfm: Possible admin folder
+|   /siteadmin/index.cfm: Possible admin folder
+|   /memberadmin.cfm: Possible admin folder
+|   /admin2/login.cfm: Possible admin folder
+|   /admloginuser.cfm: Possible admin folder
+|   /admincontrol/login.cfm: Possible admin folder
+|   /administrator/index.cfm: Possible admin folder
+|   /modelsearch/admin.cfm: Possible admin folder
+|   /panel-administracion/index.cfm: Possible admin folder
+|   /adminarea/login.cfm: Possible admin folder
+|   /adminarea/admin.cfm: Possible admin folder
+|   /adminarea/index.cfm: Possible admin folder
+|   /admin/adminLogin.cfm: Possible admin folder
+|   /webadmin/login.cfm: Possible admin folder
+|   /webadmin/admin.cfm: Possible admin folder
+|   /user.cfm: Possible admin folder
+|   /controlpanel.cfm: Possible admin folder
+|   /moderator/admin.cfm: Possible admin folder
+|   /cp.cfm: Possible admin folder
+|   /admin-login.cfm: Possible admin folder
+|   /admin/admin-login.cfm: Possible admin folder
+|   /admin/home.cfm: Possible admin folder
+|   /adm1n/: Possible admin folder
+|   /4dm1n/: Possible admin folder
+|   /account.asp: Possible admin folder
+|   /admin/account.asp: Possible admin folder
+|   /admin/index.asp: Possible admin folder
+|   /admin/login.asp: Possible admin folder
+|   /admin/admin.asp: Possible admin folder
+|   /admin_area/admin.asp: Possible admin folder
+|   /admin_area/login.asp: Possible admin folder
+|   /admin_area/index.asp: Possible admin folder
+|   /bb-admin/index.asp: Possible admin folder
+|   /bb-admin/login.asp: Possible admin folder
+|   /bb-admin/admin.asp: Possible admin folder
+|   /admin/home.asp: Possible admin folder
+|   /admin/controlpanel.asp: Possible admin folder
+|   /admin.asp: Possible admin folder
+|   /pages/admin/admin-login.asp: Possible admin folder
+|   /admin/admin-login.asp: Possible admin folder
+|   /admin-login.asp: Possible admin folder
+|   /admin/cp.asp: Possible admin folder
+|   /cp.asp: Possible admin folder
+|   /administrator/account.asp: Possible admin folder
+|   /administrator.asp: Possible admin folder
+|   /login.asp: Possible admin folder
+|   /modelsearch/login.asp: Possible admin folder
+|   /moderator.asp: Possible admin folder
+|   /moderator/login.asp: Possible admin folder
+|   /administrator/login.asp: Possible admin folder
+|   /moderator/admin.asp: Possible admin folder
+|   /controlpanel.asp: Possible admin folder
+|   /user.asp: Possible admin folder
+|   /admincp/login.asp: Possible admin folder
+|   /admincontrol.asp: Possible admin folder
+|   /adminpanel.asp: Possible admin folder
+|   /webadmin.asp: Possible admin folder
+|   /webadmin/index.asp: Possible admin folder
+|   /webadmin/admin.asp: Possible admin folder
+|   /webadmin/login.asp: Possible admin folder
+|   /admin/admin_login.asp: Possible admin folder
+|   /admin_login.asp: Possible admin folder
+|   /panel-administracion/login.asp: Possible admin folder
+|   /adminLogin.asp: Possible admin folder
+|   /admin/adminLogin.asp: Possible admin folder
+|   /home.asp: Possible admin folder
+|   /adminarea/index.asp: Possible admin folder
+|   /adminarea/admin.asp: Possible admin folder
+|   /adminarea/login.asp: Possible admin folder
+|   /panel-administracion/index.asp: Possible admin folder
+|   /panel-administracion/admin.asp: Possible admin folder
+|   /modelsearch/index.asp: Possible admin folder
+|   /modelsearch/admin.asp: Possible admin folder
+|   /administrator/index.asp: Possible admin folder
+|   /admincontrol/login.asp: Possible admin folder
+|   /adm/admloginuser.asp: Possible admin folder
+|   /admloginuser.asp: Possible admin folder
+|   /admin2.asp: Possible admin folder
+|   /admin2/login.asp: Possible admin folder
+|   /admin2/index.asp: Possible admin folder
+|   /adm/index.asp: Possible admin folder
+|   /adm.asp: Possible admin folder
+|   /adm_auth.asp: Possible admin folder
+|   /memberadmin.asp: Possible admin folder
+|   /administratorlogin.asp: Possible admin folder
+|   /siteadmin/login.asp: Possible admin folder
+|   /siteadmin/index.asp: Possible admin folder
+|   /account.aspx: Possible admin folder
+|   /admin/account.aspx: Possible admin folder
+|   /admin/index.aspx: Possible admin folder
+|   /admin/login.aspx: Possible admin folder
+|   /admin/admin.aspx: Possible admin folder
+|   /admin_area/admin.aspx: Possible admin folder
+|   /admin_area/login.aspx: Possible admin folder
+|   /admin_area/index.aspx: Possible admin folder
+|   /bb-admin/index.aspx: Possible admin folder
+|   /bb-admin/login.aspx: Possible admin folder
+|   /bb-admin/admin.aspx: Possible admin folder
+|   /admin/home.aspx: Possible admin folder
+|   /admin/controlpanel.aspx: Possible admin folder
+|   /admin.aspx: Possible admin folder
+|   /pages/admin/admin-login.aspx: Possible admin folder
+|   /admin/admin-login.aspx: Possible admin folder
+|   /admin-login.aspx: Possible admin folder
+|   /admin/cp.aspx: Possible admin folder
+|   /cp.aspx: Possible admin folder
+|   /administrator/account.aspx: Possible admin folder
+|   /administrator.aspx: Possible admin folder
+|   /login.aspx: Possible admin folder
+|   /modelsearch/login.aspx: Possible admin folder
+|   /moderator.aspx: Possible admin folder
+|   /moderator/login.aspx: Possible admin folder
+|   /administrator/login.aspx: Possible admin folder
+|   /moderator/admin.aspx: Possible admin folder
+|   /controlpanel.aspx: Possible admin folder
+|   /user.aspx: Possible admin folder
+|   /admincp/index.aspx: Possible admin folder
+|   /admincp/login.aspx: Possible admin folder
+|   /admincontrol.aspx: Possible admin folder
+|   /adminpanel.aspx: Possible admin folder
+|   /webadmin.aspx: Possible admin folder
+|   /webadmin/index.aspx: Possible admin folder
+|   /webadmin/admin.aspx: Possible admin folder
+|   /webadmin/login.aspx: Possible admin folder
+|   /admin/admin_login.aspx: Possible admin folder
+|   /admin_login.aspx: Possible admin folder
+|   /panel-administracion/login.aspx: Possible admin folder
+|   /adminLogin.aspx: Possible admin folder
+|   /admin/adminLogin.aspx: Possible admin folder
+|   /home.aspx: Possible admin folder
+|   /adminarea/index.aspx: Possible admin folder
+|   /adminarea/admin.aspx: Possible admin folder
+|   /adminarea/login.aspx: Possible admin folder
+|   /panel-administracion/index.aspx: Possible admin folder
+|   /panel-administracion/admin.aspx: Possible admin folder
+|   /modelsearch/index.aspx: Possible admin folder
+|   /modelsearch/admin.aspx: Possible admin folder
+|   /administrator/index.aspx: Possible admin folder
+|   /admincontrol/login.aspx: Possible admin folder
+|   /adm/admloginuser.aspx: Possible admin folder
+|   /admloginuser.aspx: Possible admin folder
+|   /admin2.aspx: Possible admin folder
+|   /admin2/login.aspx: Possible admin folder
+|   /admin2/index.aspx: Possible admin folder
+|   /adm/index.aspx: Possible admin folder
+|   /adm.aspx: Possible admin folder
+|   /adm_auth.aspx: Possible admin folder
+|   /memberadmin.aspx: Possible admin folder
+|   /administratorlogin.aspx: Possible admin folder
+|   /siteadmin/login.aspx: Possible admin folder
+|   /siteadmin/index.aspx: Possible admin folder
+|   /account.jsp: Possible admin folder
+|   /admin/index.jsp: Possible admin folder
+|   /admin/login.jsp: Possible admin folder
+|   /admin/admin.jsp: Possible admin folder
+|   /admin_area/admin.jsp: Possible admin folder
+|   /admin_area/login.jsp: Possible admin folder
+|   /admin_area/index.jsp: Possible admin folder
+|   /bb-admin/index.jsp: Possible admin folder
+|   /bb-admin/login.jsp: Possible admin folder
+|   /bb-admin/admin.jsp: Possible admin folder
+|   /admin/home.jsp: Possible admin folder
+|   /admin/controlpanel.jsp: Possible admin folder
+|   /admin.jsp: Possible admin folder
+|   /pages/admin/admin-login.jsp: Possible admin folder
+|   /admin/admin-login.jsp: Possible admin folder
+|   /admin-login.jsp: Possible admin folder
+|   /admin/cp.jsp: Possible admin folder
+|   /cp.jsp: Possible admin folder
+|   /administrator/account.jsp: Possible admin folder
+|   /administrator.jsp: Possible admin folder
+|   /login.jsp: Possible admin folder
+|   /modelsearch/login.jsp: Possible admin folder
+|   /moderator.jsp: Possible admin folder
+|   /moderator/login.jsp: Possible admin folder
+|   /administrator/login.jsp: Possible admin folder
+|   /moderator/admin.jsp: Possible admin folder
+|   /controlpanel.jsp: Possible admin folder
+|   /user.jsp: Possible admin folder
+|   /admincp/index.jsp: Possible admin folder
+|   /admincp/login.jsp: Possible admin folder
+|   /admincontrol.jsp: Possible admin folder
+|   /admin/account.jsp: Possible admin folder
+|   /adminpanel.jsp: Possible admin folder
+|   /webadmin.jsp: Possible admin folder
+|   /webadmin/index.jsp: Possible admin folder
+|   /webadmin/admin.jsp: Possible admin folder
+|   /webadmin/login.jsp: Possible admin folder
+|   /admin/admin_login.jsp: Possible admin folder
+|   /admin_login.jsp: Possible admin folder
+|   /panel-administracion/login.jsp: Possible admin folder
+|   /adminLogin.jsp: Possible admin folder
+|   /admin/adminLogin.jsp: Possible admin folder
+|   /home.jsp: Possible admin folder
+|   /adminarea/index.jsp: Possible admin folder
+|   /adminarea/admin.jsp: Possible admin folder
+|   /adminarea/login.jsp: Possible admin folder
+|   /panel-administracion/index.jsp: Possible admin folder
+|   /panel-administracion/admin.jsp: Possible admin folder
+|   /modelsearch/index.jsp: Possible admin folder
+|   /modelsearch/admin.jsp: Possible admin folder
+|   /administrator/index.jsp: Possible admin folder
+|   /admincontrol/login.jsp: Possible admin folder
+|   /adm/admloginuser.jsp: Possible admin folder
+|   /admloginuser.jsp: Possible admin folder
+|   /admin2.jsp: Possible admin folder
+|   /admin2/login.jsp: Possible admin folder
+|   /admin2/index.jsp: Possible admin folder
+|   /adm/index.jsp: Possible admin folder
+|   /adm.jsp: Possible admin folder
+|   /adm_auth.jsp: Possible admin folder
+|   /memberadmin.jsp: Possible admin folder
+|   /administratorlogin.jsp: Possible admin folder
+|   /siteadmin/login.jsp: Possible admin folder
+|   /siteadmin/index.jsp: Possible admin folder
+|   /admin1.php: Possible admin folder
+|   /administr8.asp: Possible admin folder
+|   /administr8.php: Possible admin folder
+|   /administr8.jsp: Possible admin folder
+|   /administr8.aspx: Possible admin folder
+|   /administr8.cfm: Possible admin folder
+|   /administr8/: Possible admin folder
+|   /administer/: Possible admin folder
+|   /administracao.php: Possible admin folder
+|   /administracao.asp: Possible admin folder
+|   /administracao.aspx: Possible admin folder
+|   /administracao.cfm: Possible admin folder
+|   /administracao.jsp: Possible admin folder
+|   /administracion.php: Possible admin folder
+|   /administracion.asp: Possible admin folder
+|   /administracion.aspx: Possible admin folder
+|   /administracion.jsp: Possible admin folder
+|   /administracion.cfm: Possible admin folder
+|   /administrators/: Possible admin folder
+|   /adminpro/: Possible admin folder
+|   /admins/: Possible admin folder
+|   /admins.cfm: Possible admin folder
+|   /admins.php: Possible admin folder
+|   /admins.jsp: Possible admin folder
+|   /admins.asp: Possible admin folder
+|   /admins.aspx: Possible admin folder
+|   /maintenance/: Possible admin folder
+|   /Lotus_Domino_Admin/: Possible admin folder
+|   /hpwebjetadmin/: Possible admin folder
+|   /_admin/: Possible admin folder
+|   /_administrator/: Possible admin folder
+|   /_administrador/: Possible admin folder
+|   /_admins/: Possible admin folder
+|   /_administrators/: Possible admin folder
+|   /_administradores/: Possible admin folder
+|   /_administracion/: Possible admin folder
+|   /_4dm1n/: Possible admin folder
+|   /_adm1n/: Possible admin folder
+|   /_Admin/: Possible admin folder
+|   /system_administration/: Possible admin folder
+|   /system-administration/: Possible admin folder
+|   /system-admin/: Possible admin folder
+|   /system-admins/: Possible admin folder
+|   /system-administrators/: Possible admin folder
+|   /administracion-sistema/: Possible admin folder
+|   /Administracion/: Possible admin folder
+|   /Admin/: Possible admin folder
+|   /Administrator/: Possible admin folder
+|   /Manager/: Possible admin folder
+|   /Adm/: Possible admin folder
+|   /systemadmin/: Possible admin folder
+|   /AdminLogin.asp: Possible admin folder
+|   /AdminLogin.php: Possible admin folder
+|   /AdminLogin.jsp: Possible admin folder
+|   /AdminLogin.aspx: Possible admin folder
+|   /AdminLogin.cfm: Possible admin folder
+|   /admin108/: Possible admin folder
+|   /pec_admin/: Possible admin folder
+|   /system/admin/: Possible admin folder
+|   /plog-admin/: Possible admin folder
+|   /ESAdmin/: Possible admin folder
+|   /axis2-admin/: Possible admin folder
+|   /_sys/: Possible admin folder
+|   /admin_cp.asp: Possible admin folder
+|   /sitecore/admin/: Possible admin folder
+|   /sitecore/login/admin/: Possible admin folder
+|   /b.sql: Possible database backup
+|   /db.sql: Possible database backup
+|   /ddb.sql: Possible database backup
+|   /users.sql: Possible database backup
+|   /database.sql: Possible database backup
+|   /mysql.sql: Possible database backup
+|   /dump.sql: Possible database backup
+|   /respaldo.sql: Possible database backup
+|   /data.sql: Possible database backup
+|   /old.sql: Possible database backup
+|   /usuarios.sql: Possible database backup
+|   /bdb.sql: Possible database backup
+|   /1.sql: Possible database backup
+|   /admin/download/backup.sql: Possible database backup
+|   /clientaccesspolicy.xml: Microsoft Silverlight crossdomain policy
+|   /atom/: RSS or Atom feed
+|   /atom.aspx: RSS or Atom feed
+|   /atom.php: RSS or Atom feed
+|   /atom.xml: RSS or Atom feed
+|   /atom.jsp: RSS or Atom feed
+|   /rss/: RSS or Atom feed
+|   /rss.aspx: RSS or Atom feed
+|   /rss.php: RSS or Atom feed
+|   /rss.xml: RSS or Atom feed
+|   /rss.jsp: RSS or Atom feed
+|   /login/: Login page
+|   /login.htm: Login page
+|   /login.jsp: Login page
+|   /test.asp: Test page
+|   /test.class: Test page
+|   /test/: Test page
+|   /test.htm: Test page
+|   /test.html: Test page
+|   /test.php: Test page
+|   /test.txt: Test page
+|   /webmail/: Mail folder
+|   /mail/: Mail folder
+|   /log/: Logs
+|   /log.htm: Logs
+|   /log.php: Logs
+|   /log.asp: Logs
+|   /log.aspx: Logs
+|   /log.jsp: Logs
+|   /logs/: Logs
+|   /logs.htm: Logs
+|   /logs.php: Logs
+|   /logs.asp: Logs
+|   /logs.aspx: Logs
+|   /logs.jsp: Logs
+|   /wwwlog/: Logs
+|   /wwwlogs/: Logs
+|   /mail_log_files/: Logs
+|   /images/rails.png: Ruby on Rails
+|   /mono/: Mono
+|   /robots.txt: Robots file
+|   /crossdomain.xml: Adobe Flash crossdomain policy
+|   /css/cake.generic.css: CakePHP application
+|   /img/cake.icon.gif: CakePHP application
+|   /img/cake.icon.png: CakePHP application
+|   /js/vendors.php: CakePHP application
+|   /cgi-bin/ffileman.cgi?: Ffileman Web File Manager
+|   /fshow.php: Horizon Web App
+|   /admin/upload.php: Admin File Upload
+|   /upload_multiple_js.php: NAS Uploader
+|   /uploadtester.asp: Free ASP Upload Shell
+|   /info.php: Possible information file
+|   /phpinfo.php: Possible information file
+|   /kusabax/manage_page.php: Kusabax Image Board
+|   /plus/lurking.php: phpMyChat Plus
+|   /adm/barra/assetmanager/assetmanager.php: 360 Web Manager
+|   /eyeos/: Possible eyeOS installation
+|   /NETWARE.HTM: Planet FPS-1101
+|   /setup.cgi: Linksys Cisco Wag120n or similar
+|   /debug.cgi: Linksys WRT54G
+|   /ehcp/?op=applyforftpaccount: Easy Hosting Control Panel
+|   /ehcp/?op=applyforaccount: Easy Hosting Control Panel
+|   /ehcp/?op=applyfordomainaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyforftpaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyforaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyfordomainaccount: Easy Hosting Control Panel
+|   /tools_admin.cgi?: D-Link WBR-1310
+|   /appServer/jvmReport.jsf?instanceName=server&amp;pageTitle=JVM%20Report: Oracle GlashFish Server Information
+|   /common/appServer/jvmReport.jsf?pageTitle=JVM%20Report: Oracle GlashFish Server Information
+|   /common/appServer/jvmReport.jsf?reportType=summary&amp;instanceName=server: Oracle GlashFish Server Information
+|   /console/login/loginForm.jsp: Oracle WebLogic Server Administration Console
+|   /browserId/wizardForm.jhtml: Cisco Collaboration Server
+|   /webline/html/forms/callback.jhtml: Cisco Collaboration Server
+|   /webline/html/forms/callbackICM.jhtml: Cisco Collaboration Server
+|   /webline/html/agent/AgentFrame.jhtml: Cisco Collaboration Server
+|   /webline/html/agent/default/badlogin.jhtml: Cisco Collaboration Server
+|   /callme/callForm.jhtml: Cisco Collaboration Server
+|   /webline/html/multichatui/nowDefunctWindow.jhtml: Cisco Collaboration Server
+|   /browserId/wizard.jhtml: Cisco Collaboration Server
+|   /admin/CiscoAdmin.jhtml: Cisco Collaboration Server
+|   /msccallme/mscCallForm.jhtml: Cisco Collaboration Server
+|   /webline/html/admin/wcs/LoginPage.jhtml: Cisco Collaboration Server
+|   /restoreinfo.cgi: Sagem router
+|   /confirminvite.php: phpMyBitTorrent
+|   /sourcebans/: SourceBans - Steam server application
+|   /swfupload/index.php: SWFUpload
+|   /mymarket/shopping/index.php: MyMarket
+|   /myshop_start.php: FozzCom shopping
+|   /piranha/secure/passwd.php3: RedHat Piranha Virtual Server
+|   /cgi-bin/ck/mimencode: ContentKeeper Web Appliance
+|   /cgi-bin/masterCGI?: Alcatel-Lucent OmniPCX Enterprise
+|   /tiny_mce/plugins/filemanager/: Tiny MCE File Upload
+|   /upload/scp/ajax.php: osTicket / AJAX File Upload
+|   /cgi-mod/view_help.cgi: Barracuda Networks Spam &amp; Virus Firewall
+|   /cgi-mod/index.cgi: Barracuda Web Application Firewall
+|   /cgi-mod/smtp_test.cgi: Barracuda IM Firewall
+|   /TopToolArea.html: Alteon OS BBI (Nortell)
+|   /switchSystem.html: Alteon OS BBI (Nortell)
+|   /intruvert/jsp/module/Login.jsp: McAfee Network Security Manager
+|   /ajaxfilemanager/: AJAX File Manager
+|   /upload/data/settings.cdb: CF Image Hosting DB
+|   /fm.php: Simple File Manager
+|   /nagios3/cgi-bin/statuswml.cgi: Nagios3
+|   /nagios3/: Nagios3
+|   /test/logon.html: Jetty
+|   /cal_cat.php: Calendarix
+|   /calendar/cal_cat.php: Calendarix
+|   /cal/cal_cat.php: Calendarix
+|   /private/sdc.tgz: IBM Bladecenter Management Logs
+|   /cacti/: Cacti Web Monitoring
+|   /cgi-bin/awstats.pl: AWStats
+|   /wiki/rankings.php: Bit Weaver
+|   /reqdetails.php: BtiTracker
+|   /shared/help.php: OpenBiblio/WebBiblio Subject Gateway System
+|   /seti.php: PHP SETI@home
+|   /imc/: 3Com Intelligent Management Center
+|   /imcws/: 3Com Intelligent Management Center
+|   /partymgr/: Apache OFBiz
+|   /Base/upload.php: MassMirror Uploader
+|   /Base/example_1.php: MassMirror Uploader
+|   /YUI-upload/html: YUI Images / File Upload
+|   /tools/filemanager/skins/mobile/admin1.template.php: ispCP Omega
+|   /Uploadify/: Uploadify
+|   /syssite/: ShopEx
+|   /updown.php: PHP Uploader Downloader
+|   /modules/docmanager/doctypetemplates/myuploadedfile: Achievo
+|   /ReqWebHelp/advanced/workingSet.jsp: IBM Rational RequisitePro/ReqWebHelp
+|   /dhost/: Novell eDirectory
+|   /engine/api/api.class.php: DatalifeEngine
+|   /jsft_resource.jsf: JSFTemplating/Mojarra Scales/GlassFish Application Server
+|   /scales_static_resource.jsf: JSFTemplating/Mojarra Scales/GlassFish Application Server
+|   /setup/password_required.html: 2WIRE GATEWAY
+|   /zp-core/: Zen Photo
+|   /amember/: aMember
+|   /.hgignore: Revision control ignore file
+|   /.gitignore: Revision control ignore file
+|   /.bzrignore: Revision control ignore file
+|   /arcsight/: Arcsight
+|   /arcsight/images/logo-login-arcsight.gif: Arcsight
+|   /arcsight/images/navbar-icon-logout-on.gif: Arcsight
+|   /images/logo-arcsight.gif: Arcsight
+|   /logger/monitor.ftl: Arcsight
+|   /beef/: BeEF Browser Exploitation Framework
+|   /BEEF/: BeEF Browser Exploitation Framework
+|   /beef/images/beef.gif: BeEF Browser Exploitation Framework
+|   /gfx/form_top_left_corner.gif: Secunia NSI
+|   /gfx/logout_24.png: Secunia NSI
+|   /gfx/new_logo.gif: Secunia NSI
+|   /javascript/sorttable.js: Secunia NSI
+|   /images/btn_help_nml.gif: IBM Proventia
+|   /images/hdr_icon_homeG.gif: IBM Proventia
+|   /spControl.php: IBM Proventia
+|   /images/isslogo.gif: IBM Proventia
+|   /deploymentmanager/: IBM Proventia
+|   /i18n/EN/css/foundstone.css: Foundstone
+|   /i18n/EN/images/external_nav_square.gif: Foundstone
+|   /officescan/console/html/cgi/cgiChkMasterPwd.exe: Trend Micro OfficeScan Server
+|   /officescan/console/html/ClientInstall/officescannt.htm: Trend Micro OfficeScan Server
+|   /officescan/console/html/images/icon_refresh.gif: Trend Micro OfficeScan Server
+|   /picts/BC_bwlogorev.gif: BlueCoat Reporter
+|   /picts/menu_leaf.gif: BlueCoat Reporter
+|   /theme/images/en/login1.gif: Fortinet VPN/Firewall
+|   /NessusClient.swf: Nessus
+|   /dotDefender/: dotDefender Web Application Firewall
+|   /vmware/: VMWare
+|   /vmware/imx/vmware_boxes-16x16.png: VMWare
+|   /ui/: VMWare
+|   /ui/imx/vmwareLogo-16x16.png: VMWare
+|   /ui/imx/vmwarePaperBagLogo-16x16.png: VMWare
+|   /ui/vManage.do: VMWare
+|   /client/VMware-viclient.exe: VMWare
+|   /en/welcomeRes.js: VMWare
+|   /citrix/: Citrix
+|   /Citrix/: Citrix
+|   /Citrix/MetaFrame/auth/login.aspx: Citrix
+|   /images/ctxHeader01.jpg: Citrix
+|   /images/Safeword_Token.jpg: Citrix
+|   /sw/auth/login.aspx: Citrix
+|   /vpn/images/AccessGateway.ico: Citrix
+|   /citrix/AccessPlatform/auth/clientscripts/: Citrix
+|   /AccessPlatform/auth/clientscripts/: Citrix
+|   /Citrix//AccessPlatform/auth/clientscripts/cookies.js: Citrix
+|   /Citrix/AccessPlatform/auth/clientscripts/login.js: Citrix
+|   /Citrix/PNAgent/config.xml: Citrix
+|   /cgi-bin/image/shikaku2.png: TeraStation PRO RAID 0/1/5 Network Attached Storage
+|   /config/public/usergrp.gif: AXIS StorPoint
+|   /pictures/buttons/file_view_mark.gif: AXIS StorPoint
+|   /cpqlogin.htm?RedirectUrl=/&amp;RedirectQueryString=: HP System Management Homepage
+|   /hplogo.gif: HP System Management Homepage
+|   /ie_index.htm: HP Integrated Lights Out
+|   /ilo.gif: HP Integrated Lights Out
+|   /images/icon_server_connected.gif: HP Blade Enclosure
+|   /mxhtml/images/signin_logo.gif: HP Insight Manager
+|   /mxhtml/images/status_critical_15.gif: HP Insight Manager
+|   /mxportal/home/en_US/servicetools.gif: HP Insight Manager
+|   /mxportal/home/MxPortalFrames.jsp: HP Insight Manager
+|   /xymon/menu/menu.css: Xymon
+|   /rrc.htm: Raritan Remote Client
+|   /manager/html/upload: Apache Tomcat
+|   /manager/html: Apache Tomcat
+|   /axis2/axis2-web/HappyAxis.jsp: Apache Axis2
+|   /axis2/: Apache Axis2
+|   /happyaxis.jsp: Apache Axis2
+|   /web-console/ServerInfo.jsp: JBoss Console
+|   /web-console/Invoker: JBoss Console
+|   /invoker/JMXInvokerServlet: JBoss Console
+|   /invoker/: JBoss Console
+|   /jmx-console/: JBoss Console
+|   /admin-console/: JBoss Console
+|   /CFIDE/administrator/enter.cfm: ColdFusion Admin Console
+|   /CFIDE/administrator/entman/index.cfm: ColdFusion Admin Console
+|   /cfide/install.cfm: ColdFusion Admin Console
+|   /CFIDE/administrator/archives/index.cfm: ColdFusion Admin Console
+|   /CFIDE/wizards/common/_logintowizard.cfm: ColdFusion Admin Console
+|   /CFIDE/componentutils/login.cfm: ColdFusion Admin Console
+|   /CFIDE/Administrator/startstop.html: ColdFusion Admin Console
+|   /flexfm/: Flex File Manager
+|   /lib/usermanagement/userInfo.php: Testlink TestManagement
+|   /security/xamppsecurity.php: XAMPP
+|   /dm-albums/dm-albums.php: DM FileManager
+|   /x_logo.gif: Xerox printer
+|   /gif/hp.gif: HP Printer
+|   /gif/hp_invent_logo.gif: HP Printer
+|   /gif/printer.gif: HP Printer
+|   /hp/device/this.LCDispatcher: HP Printer
+|   /hp/device/webAccess/index.htm: HP Printer
+|   /PageSelector.class: HP Printer
+|   /images/lexbold.gif: Lexmark Printer
+|   /images/lexlogo.gif: Lexmark Printer
+|   /images/printer.gif: Lexmark Printer
+|   /printer/image: Lexmark Printer
+|   /images/mute_alloff.gif: NEC Projector
+|   /images/pic_bri.gif: NEC Projector
+|   /scanweb/images/scanwebtm.gif: SCAN Web (Webcam)
+|   /view/index.shtml: Axis 212 PTZ Network Camera
+|   /phpmyadmin/: phpMyAdmin
+|   /phpMyAdmin/: phpMyAdmin
+|   /PHPMyAdmin/: phpMyAdmin
+|   /PMA/: phpMyAdmin
+|   /pma/: phpMyAdmin
+|   /dbadmin/: phpMyAdmin
+|   /myadmin/: phpMyAdmin
+|   /php-my-admin/: phpMyAdmin
+|   /phpMyAdmin2/: phpMyAdmin
+|   /phpMyAdmin-2/: phpMyAdmin
+|   /phpMyAdmin-2.2.3/: phpMyAdmin
+|   /phpMyAdmin-2.2.6/: phpMyAdmin
+|   /phpMyAdmin-2.5.1/: phpMyAdmin
+|   /phpMyAdmin-2.5.4/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.5.5/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.5.6-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.5.6-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.5.6/: phpMyAdmin
+|   /phpMyAdmin-2.5.7/: phpMyAdmin
+|   /phpMyAdmin-2.5.7-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-alpha/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-alpha2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-beta2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc3/: phpMyAdmin
+|   /phpMyAdmin-2.6.0/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.6.1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.6.2/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.3/: phpMyAdmin
+|   /phpMyAdmin-2.6.3-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.3-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl4/: phpMyAdmin
+|   /phpMyAdmin-2.6.4/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.7.0/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.8.0/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.2/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.3/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.4/: phpMyAdmin
+|   /phpMyAdmin-2.8.1-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.8.1/: phpMyAdmin
+|   /phpMyAdmin-2.8.2/: phpMyAdmin
+|   /sqlmanager/: phpMyAdmin
+|   /php-myadmin/: phpMyAdmin
+|   /phpmy-admin/: phpMyAdmin
+|   /mysqladmin/: phpMyAdmin
+|   /mysql-admin/: phpMyAdmin
+|   /websql/: phpMyAdmin
+|   /_phpmyadmin/: phpMyAdmin
+|   /footer1.gif: (possible) Oracle Web server
+|   /homepage.nsf/homePage.gif?OpenImageResource: Lotus Domino
+|   /icons/ecblank.gif: Lotus Domino
+|   /852566C90012664F: Lotus Domino
+|   /admin4.nsf: Lotus Domino
+|   /admin5.nsf: Lotus Domino
+|   /admin.nsf: Lotus Domino
+|   /agentrunner.nsf: Lotus Domino
+|   /alog.nsf: Lotus Domino
+|   /a_domlog.nsf: Lotus Domino
+|   /bookmark.nsf: Lotus Domino
+|   /busytime.nsf: Lotus Domino
+|   /catalog.nsf: Lotus Domino
+|   /certa.nsf: Lotus Domino
+|   /certlog.nsf: Lotus Domino
+|   /certsrv.nsf: Lotus Domino
+|   /chatlog.nsf: Lotus Domino
+|   /clbusy.nsf: Lotus Domino
+|   /cldbdir.nsf: Lotus Domino
+|   /clusta4.nsf: Lotus Domino
+|   /collect4.nsf: Lotus Domino
+|   /da.nsf: Lotus Domino
+|   /dba4.nsf: Lotus Domino
+|   /dclf.nsf: Lotus Domino
+|   /DEASAppDesign.nsf: Lotus Domino
+|   /DEASLog01.nsf: Lotus Domino
+|   /DEASLog02.nsf: Lotus Domino
+|   /DEASLog03.nsf: Lotus Domino
+|   /DEASLog04.nsf: Lotus Domino
+|   /DEASLog05.nsf: Lotus Domino
+|   /DEASLog.nsf: Lotus Domino
+|   /decsadm.nsf: Lotus Domino
+|   /decslog.nsf: Lotus Domino
+|   /DEESAdmin.nsf: Lotus Domino
+|   /dirassist.nsf: Lotus Domino
+|   /doladmin.nsf: Lotus Domino
+|   /domadmin.nsf: Lotus Domino
+|   /domcfg.nsf: Lotus Domino
+|   /domguide.nsf: Lotus Domino
+|   /domlog.nsf: Lotus Domino
+|   /dspug.nsf: Lotus Domino
+|   /events4.nsf: Lotus Domino
+|   /events5.nsf: Lotus Domino
+|   /events.nsf: Lotus Domino
+|   /event.nsf: Lotus Domino
+|   /homepage.nsf: Lotus Domino
+|   /iNotes/Forms5.nsf/$DefaultNav: Lotus Domino
+|   /jotter.nsf: Lotus Domino
+|   /leiadm.nsf: Lotus Domino
+|   /leilog.nsf: Lotus Domino
+|   /leivlt.nsf: Lotus Domino
+|   /log4a.nsf: Lotus Domino
+|   /log.nsf: Lotus Domino
+|   /l_domlog.nsf: Lotus Domino
+|   /mab.nsf: Lotus Domino
+|   /mail10.box: Lotus Domino
+|   /mail1.box: Lotus Domino
+|   /mail2.box: Lotus Domino
+|   /mail3.box: Lotus Domino
+|   /mail4.box: Lotus Domino
+|   /mail5.box: Lotus Domino
+|   /mail6.box: Lotus Domino
+|   /mail7.box: Lotus Domino
+|   /mail8.box: Lotus Domino
+|   /mail9.box: Lotus Domino
+|   /mail.box: Lotus Domino
+|   /msdwda.nsf: Lotus Domino
+|   /mtatbls.nsf: Lotus Domino
+|   /mtstore.nsf: Lotus Domino
+|   /names.nsf: Lotus Domino
+|   /nntppost.nsf: Lotus Domino
+|   /nntp/nd000001.nsf: Lotus Domino
+|   /nntp/nd000002.nsf: Lotus Domino
+|   /nntp/nd000003.nsf: Lotus Domino
+|   /ntsync45.nsf: Lotus Domino
+|   /perweb.nsf: Lotus Domino
+|   /qpadmin.nsf: Lotus Domino
+|   /quickplace/quickplace/main.nsf: Lotus Domino
+|   /reports.nsf: Lotus Domino
+|   /sample/siregw46.nsf: Lotus Domino
+|   /schema50.nsf: Lotus Domino
+|   /setupweb.nsf: Lotus Domino
+|   /setup.nsf: Lotus Domino
+|   /smbcfg.nsf: Lotus Domino
+|   /smconf.nsf: Lotus Domino
+|   /smency.nsf: Lotus Domino
+|   /smhelp.nsf: Lotus Domino
+|   /smmsg.nsf: Lotus Domino
+|   /smquar.nsf: Lotus Domino
+|   /smsolar.nsf: Lotus Domino
+|   /smtime.nsf: Lotus Domino
+|   /smtpibwq.nsf: Lotus Domino
+|   /smtpobwq.nsf: Lotus Domino
+|   /smtp.box: Lotus Domino
+|   /smtp.nsf: Lotus Domino
+|   /smvlog.nsf: Lotus Domino
+|   /srvnam.htm: Lotus Domino
+|   /statmail.nsf: Lotus Domino
+|   /statrep.nsf: Lotus Domino
+|   /stauths.nsf: Lotus Domino
+|   /stautht.nsf: Lotus Domino
+|   /stconfig.nsf: Lotus Domino
+|   /stconf.nsf: Lotus Domino
+|   /stdnaset.nsf: Lotus Domino
+|   /stdomino.nsf: Lotus Domino
+|   /stlog.nsf: Lotus Domino
+|   /streg.nsf: Lotus Domino
+|   /stsrc.nsf: Lotus Domino
+|   /userreg.nsf: Lotus Domino
+|   /vpuserinfo.nsf: Lotus Domino
+|   /webadmin.nsf: Lotus Domino
+|   /web.nsf: Lotus Domino
+|   /.nsf/../winnt/win.ini: Lotus Domino
+|   /icons/ecblank.gif: Lotus Domino
+|   /_layouts/images/helpicon.gif: MS Sharepoint
+|   /Pages/Default.aspx: MS Sharepoint
+|   /PublishingImages/NewsArticleImage.jpg: MS Sharepoint
+|   /_admin/operations.aspx: MS Sharepoint
+|   /_app_bin: MS Sharepoint
+|   /_controltemplates: MS Sharepoint
+|   /_layouts: MS Sharepoint
+|   /_layouts/viewlsts.aspx: MS Sharepoint
+|   /forms/allitems.aspx: MS Sharepoint
+|   /forms/webfldr.aspx: MS Sharepoint
+|   /forms/mod-view.aspx: MS Sharepoint
+|   /forms/my-sub.aspx: MS Sharepoint
+|   /pages/categoryresults.aspx: MS Sharepoint
+|   /categories/viewcategory.aspx: MS Sharepoint
+|   /sitedirectory: MS Sharepoint
+|   /editdocs.aspx: MS Sharepoint
+|   /workflowtasks/allitems.aspx: MS Sharepoint
+|   /lists/tasks/: MS Sharepoint
+|   /categories/allcategories.aspx: MS Sharepoint
+|   /categories/SOMEOTHERDIR/allcategories.aspx: MS Sharepoint
+|   /mycategories.aspx: MS Sharepoint
+|   /lists/: MS Sharepoint
+|   /lists/allitems.aspx: MS Sharepoint
+|   /lists/default.aspx: MS Sharepoint
+|   /lists/allposts.aspx: MS Sharepoint
+|   /lists/archive.aspx: MS Sharepoint
+|   /lists/byauthor.aspx: MS Sharepoint
+|   /lists/calendar.aspx: MS Sharepoint
+|   /lists/mod-view.aspx: MS Sharepoint
+|   /lists/myposts.aspx: MS Sharepoint
+|   /lists/my-sub.aspx: MS Sharepoint
+|   /lists/allcomments.aspx: MS Sharepoint
+|   /lists/mycomments.aspx: MS Sharepoint
+|   /_layouts/userdisp.aspx: MS Sharepoint
+|   /_layouts/help.aspx: MS Sharepoint
+|   /_layouts/download.aspx: MS Sharepoint
+|   /projectserver/Home/HomePage.asp: MS Project Server
+|   /projectserver/images/branding.gif: MS Project Server
+|   /projectserver/images/pgHome.gif: MS Project Server
+|   /projectserver/images/pgTask.gif: MS Project Server
+|   /projectserver/Tasks/Taskspage.asp: MS Project Server
+|   /exchweb/bin/auth/owalogon.asp: Outlook Web Access
+|   /images/outlook.jpg: Outlook Web Access
+|   /owa/8.1.375.2/themes/base/lgntopl.gif: Outlook Web Access
+|   /owa/: Outlook Web Access
+|   /tsweb/: Remote Desktop Web Connection
+|   /reportserver/: Microsoft SQL Report Service
+|   /HW_logo.html: Huawei HG 530
+|   /icons/icon_set_up_2701XX_01.gif: 2WIRE 2701HG
+|   /icons/icon_homeportal_2701XX.gif: 2WIRE 2701HG
+|   /es/images/nav_sl_home_network_01.gif: 2WIRE 2701HG
+|   /en/images/nav_sl_home_network_01.gif: 2WIRE 2701HG
+|   /images/stxx__xl.gif: Thomson TG585
+|   /images/bbc__xl.gif: Thomson TG585
+|   /cmspages.php: 2Point Solutions CMS
+|   /sc_webcat/ecat/cms_view.php: Webcat
+|   /kbcat.cgi: ActivDesk
+|   /forum_answer.php?que_id=1: Guru JustAnswer
+|   /templates1/view_product.php: HB ECommerce
+|   /escort-profile.php: First Escort Marketing CMS
+|   /pages/indexheader.php: Green Pants CMS
+|   /pages/searcher.php: Green Pants CMS
+|   /pages/indexviewentry.php: Green Pants CMS
+|   /tinymcpuk/filemanager/browser.html: CMS Lokomedia
+|   /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS
+|   /leftmenubody.php: Quicktech
+|   /dsp_page.cfm: Alcassofts SOPHIA CMS
+|   /zikula/index.php: Zikula CMS
+|   /system/admin/header.php: Habari Blog
+|   /system/admin/comments_items.php: Habari Blog
+|   /scripts/fckeditor/editor/filemanager/connectors/test.html: Digitalus CMS/FCKEditor File upload
+|   /scripts/fckeditor/editor/filemanager/connectors/uploadtest.html: Digitalus CMS/FCKEditor File upload
+|   /fckeditor/editor/filemanager/connectors/test.html: phpmotion/FCKeditor File upload
+|   /fckeditor/editor/filemanager/upload/test.html: Geeklog/FCKeditor File upload
+|   /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload
+|   /fckeditor/editor/filemanager/connectors/php/config.php: DM File Manager/FCKeditor File upload
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/asp/connector.asp: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/aspx/connector.aspx: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/cfm/connector.cfm: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/lasso/connector.lasso: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/perl/connector.cgi: PHPnuke/Remote File Download
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/py/connector.py: PHPnuke/Remote File Download
+|   /FCKEditor/editor/filemanager/browser/default/connectors/test.html: EgO or osCMax/FCKeditor File upload
+|   /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload
+|   /Backstage/Components/FreeTextBox/ftb.imagegallery.aspx: Luftguitar CMS/File upload
+|   /_plugin/fckeditor/editor/filemanager/connectors/test.html: SweetRice/FCKeditor File upload
+|   /html/news_fckeditor/editor/filemanager/upload/php/upload.php: cardinalCms/FCKeditor File upload
+|   /fckeditor/editor/filemanager/connectors/test.html: LightNEasy/FCKeditor File upload
+|   /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload
+|   /uploadsnaps.php: ZeeMatri/File upload
+|   /upload/includes/js/files/upload.php: Digital College/File upload
+|   /tinybrowser/upload.php: Tinybrowser Remote File Upload
+|   /editor/editor/filemanager/upload/test.html: Tadbir / File Upload
+|   /photogallery_open.php: Heaven Soft CMS
+|   /Providers/HtmlEditorProviders/Fck/fcklinkgallery.aspx: DotNetNuke / File Upload
+|   /assetmanager/assetmanager.asp: Asset Manager/Remote File upload
+|   /Final/login/ava_upl.php: CH-CMS
+|   /Final/login/ava_upl2.php: CH-CMS
+|   /spaw/demo.php: SpawCMS/Remote File upload
+|   /admin/jscript/upload.php: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.html: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.pl: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.asp: Lizard Cart/Remote File upload
+|   /databases/acidcat_3.mdb: Acidcat CMS Database
+|   /mdb-database/dblog.mdb: dBlog Database
+|   /db/users.mdb: BlogWorx Database
+|   /infusions/avatar_studio/avatar_studio.php: PHP-Fusion Mod avatar_studio
+|   /bnnr.php: vBulletin ads_saed
+|   /vb/bnnr.php: vBulletin ads_saed
+|   /forum/bnnr.php: vBulletin ads_saed
+|   /weblink_cat_list.php: WHMCompleteSolution CMS
+|   /pix/moodlelogo.gif: Moodle files
+|   /admin/environment.xml: Moodle files
+|   /typo3/sysext/t3skin/images/login/typo3logo-white-greyback.gif: Typo3 Installation
+|   /squirrelmail/images/sm_logo.png: SquirrelMail
+|   /webmail/images/sm_logo.png: SquirrelMail
+|   /skins/default/images/roundcube_logo.png: RoundCube
+|   /archive/flash:home/html/images/Cisco_logo.gif: Cisco SDM
+|   /Default?MAIN=DEVICE: TopAccess Toshiba e-Studio520
+|   /TopAccess/images/RioGrande/Rio_PPC.gif: TopAccess Toshiba e-Studio520
+|   /jwsappmngr.jnlp: netForensics
+|   /nfdesktop.jnlp: netForensics
+|   /nfservlets/servlet/SPSRouterServlet/: netForensics
+|   /na_admin/styles/dfm.css: NetworkAppliance NetApp Release 6.5.3P4
+|   /sitecore/admin/stats.aspx: Sitecore.NET (CMS)
+|   /sitecore/admin/unlock_admin.aspx: Sitecore.NET (CMS)
+|   /sitecore/shell/Applications/shell.xml: Sitecore.NET (CMS)
+|   /sitecore/admin/ShowConfig.aspx: Sitecore.NET (CMS)
+|   /App_Config/Security/Domains.config.xml: Sitecore.NET (CMS)
+|   /App_Config/Security/GlobalRoles.config.xml: Sitecore.NET (CMS)
+|   /sitecore%20modules/staging/service/api.asmx: Sitecore.NET (CMS)
+|   /sitecore%20modules/staging/workdir: Sitecore.NET (CMS)
+|_  /sitecore/system/Settings/Security/Profiles: Sitecore.NET (CMS)
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-headers: 
+|   Content-Type: text/html
+|   Server: Intel(R) Active Management Technology 12.0.94.2380
+|   Transfer-Encoding: chunked
+|   Connection: close
+|   
+|_  (Request type: GET)
+|_http-comments-displayer: Couldn't find any comments.
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Redirected To: /logon.htm
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+| http-title: Intel&amp;reg; Active Management Technology
+|_Requested resource was /logon.htm
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=2/11%OT=135%CT=1%CU=37650%PV=Y%DS=0%DC=L%G=Y%TM=698BFD
+OS:68%P=i686-pc-windows-windows)SEQ(SP=100%GCD=1%ISR=108%TI=I%CI=I%II=I%SS=
+OS:S%TS=A)SEQ(SP=103%GCD=1%ISR=10A%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=105%GCD=
+OS:1%ISR=108%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=105%GCD=1%ISR=109%TI=I%CI=I%II
+OS:=I%SS=S%TS=A)SEQ(SP=FD%GCD=1%ISR=10F%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFF
+OS:D7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST
+OS:11%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(
+OS:R=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%
+OS:W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+OS:T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A
+OS:=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%D
+OS:F=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=8
+OS:0%CD=Z)
+
+Network Distance: 0 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/h:intel:active_management_technology:12.0.94.2380
+
+Host script results:
+|_fcrdns: FAIL (No PTR record)
+| port-states: 
+|   tcp: 
+|     open: 135,139,445,16992
+|_    closed: 1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-444,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3006,3011,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5985-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389
+|_smb-vuln-ms10-054: false
+|_ipidseq: Unknown
+| dns-blacklist: 
+|   SPAM
+|     l2.apews.org - FAIL
+|_    list.quorum.to - SPAM
+| smb2-time: 
+|   date: 2026-02-11T03:52:12
+|_  start_date: N/A
+| smb2-capabilities: 
+|   2.0.2: 
+|     Distributed File System
+|   2.1: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0.2: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.1.1: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| qscan: 
+| PORT   FAMILY  MEAN (us)   STDDEV      LOSS (%)
+| 1      0       2020800.00  6358708.25  0.0%
+| 135    0       72600.00    213422.48   0.0%
+| 139    0       960700.00   3010243.55  0.0%
+| 445    0       2786300.00  8780485.78  0.0%
+|_16992  0       2848900.00  8974228.03  0.0%
+| smb-protocols: 
+|   dialects: 
+|     2.0.2
+|     2.1
+|     3.0
+|     3.0.2
+|_    3.1.1
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_msrpc-enum: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+Post-scan script results:
+| reverse-index: 
+|   135/tcp: 192.168.4.62
+|   139/tcp: 192.168.4.62
+|   445/tcp: 192.168.4.62
+|_  16992/tcp: 192.168.4.62
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 208.00 seconds
+</output><host comment=""><status state="up"></status><address addr="192.168.4.62" vendor="" addrtype="ipv4"></address><hostnames></hostnames><ports><extraports count="996" state="closed"></extraports><port portid="135" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="139" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="netbios-ssn" product="Microsoft Windows netbios-ssn"></service></port><port portid="445" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="microsoft-ds"></service></port><port portid="16992" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="Intel Active Management Technology User Notification Service httpd" version="12.0.94.2380"></service></port></ports><os><portused state="open" proto="tcp" portid="135"></portused><portused state="closed" proto="tcp" portid="1"></portused><portused state="closed" proto="udp" portid="37650"></portused><osmatch name="Microsoft Windows 10 1607 - 11 23H2" accuracy="99" line="74791"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="99"></osclass></osmatch><osmatch name="Microsoft Windows 10 1511" accuracy="97" line="74530"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="97"></osclass></osmatch><osmatch name="Windows 11 21H2" accuracy="97" line="75587"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="97"></osclass></osmatch><osmatch name="Windows Server 2022" accuracy="97" line="82130"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="2022" accuracy="97"></osclass></osmatch><osmatch name="Microsoft Windows 10 1703" accuracy="96" line="74847"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="96"></osclass></osmatch><osmatch name="Microsoft Windows 10 1703 or Windows 11 21H2" accuracy="96" line="74943"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="96"></osclass></osmatch><osmatch name="Microsoft Windows 10 1703 - 11 21H2" accuracy="95" line="74920"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="95"></osclass></osmatch><osmatch name="Microsoft Windows 11 21H2" accuracy="95" line="75569"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="95"></osclass></osmatch><osmatch name="Microsoft Windows 7 or 8.1 R1" accuracy="94" line="82755"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="8.1" accuracy="94"></osclass></osmatch><osmatch name="Microsoft Windows 10 1607" accuracy="94" line="74626"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="94"></osclass></osmatch></os><uptime seconds="63899" lastboot="Tue Feb 10 21:09:17 2026"></uptime><tcpsequence index="253" difficulty="Good luck!" values="317FB521,B7CF6C95,663B96CE,F9FF6364,424120CA,D0A5C772"></tcpsequence><ipidsequence class="Incremental" values="FB86,FB88,FB8A,FB8C,FB8E,FB90"></ipidsequence><tcptssequence class="1000HZ" values="3CCD8B0,3CCD91A,3CCD981,3CCD9EB,3CCDA55,3CCDAC2"></tcptssequence></host><runstats><finished time="1770782056" timestr="Wed Feb 11 14:54:16 2026"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
